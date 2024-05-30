@@ -1,5 +1,7 @@
 # Harlequin
 
+[README](https://ucsd-cse231.github.io/sp24/week10a/index.html)
+
 ![The Spotted Harlequin Snake](harlequin.jpg)
 
 ## Language
