@@ -1,0 +1,3 @@
+(defn (incr x) (+ x 1))
+
+(incr true)

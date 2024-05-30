@@ -1,0 +1,23 @@
+(defn (fact n)
+  (let*
+    ((i 1) (acc 1))
+    (loop
+      (if (<= i n)
+        (block
+          (set! acc (* acc i))
+          (set! i (+ i 1))
+        )
+        (break acc)
+      )
+    )
+  )
+)
+
+;; (defn (fact_rec n)
+;;   (if (<= n 1)
+;;     1
+;;     (* n (fact_rec (- n 1)))
+;;   )
+;; )
+
+(vec (fact input) (fact input))

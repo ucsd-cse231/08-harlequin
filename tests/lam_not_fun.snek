@@ -1,0 +1,5 @@
+(let (f (fn (f it) (it 5)))
+   (let (bob 10)
+      (f bob)
+   )
+)

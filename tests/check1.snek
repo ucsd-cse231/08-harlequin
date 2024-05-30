@@ -1,0 +1,13 @@
+(defn (cons h t) (as (forall (a) (-> (a (list a)) (list a))))
+  (vec h t))
+
+(defn (nil) (as (forall (a) (-> () (list a))))
+  false)
+
+(defn (swapList p) (is (forall (a b) (-> ((vec (list a) (list b)))  (vec (list b) (list a)))))
+  (vec (vec-get p 1) (vec-get p 0)))
+
+(let*
+    ((l0 (cons 1 (nil)))
+     (l1 (cons true (nil))))
+  (swapList (vec l0 l1)))

@@ -1,0 +1,26 @@
+(defn (nil) (as (forall (a) (-> () (list a))))
+  false)
+
+(defn (cons h t) (as (forall (a) (-> (a (list a)) (list a))))
+  (vec h t))
+
+(defn (head l) (as (forall (a) (-> ((list a)) a)))
+  (vec-get l 0))
+
+(defn (tail l) (as (forall (a) (-> ((list a)) (list a))))
+  (vec-get l 1))
+
+(defn (isnil l) (as (forall (a) (-> ((list a)) bool)))
+  (= l false))
+
+;;------------------------------------------------------------
+
+(defn (sum xs)
+  (if (isnil xs)
+    0
+    (+ (head xs) (sum (tail xs)))))
+
+(let (xs  (cons 10 (cons 20 (cons 30 (nil)))))
+  (sum xs))
+
+;;------------------------------------------------------------

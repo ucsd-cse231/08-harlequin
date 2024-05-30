@@ -1,0 +1,2 @@
+(let (incr (fn (x) (+ x 1)))
+    (incr input))

@@ -1,0 +1,5 @@
+(defn (id x) x)
+
+(let* ((a1 (id 7))
+       (a2 (id true)))
+  true)

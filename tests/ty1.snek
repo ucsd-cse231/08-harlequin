@@ -1,0 +1,4 @@
+(defn (choose b x y)
+  (if b (+ x 1) (- y 1)))
+
+(choose (<= 10 input) 10 20)

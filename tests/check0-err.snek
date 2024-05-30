@@ -1,0 +1,4 @@
+(defn (eqInt x y) (is (-> (int int) bool))
+  (= x y))
+
+(eqInt true (<= 10 input))

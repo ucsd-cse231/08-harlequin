@@ -1,0 +1,7 @@
+(defn (f it x)
+  (+ (it x) 1))
+
+(defn (incr z)
+  (+ z 1))
+
+(f 10 incr)
