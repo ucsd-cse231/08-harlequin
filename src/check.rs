@@ -57,7 +57,7 @@ fn infer<A: Span>(env: &TypeEnv, subst: &mut Subst, e: &Expr<A>) -> Result<Ty, E
             poly_sig(Prim::AAToA),
             &[ident(x), (**e).clone()],
         )?,
-        Loop(e) | Break(e) => todo!("TBD: fill this in"),
+        Loop(_e) | Break(_e) => todo!("TBD: fill this in"),
         Print(e) => infer_app(&e.ann, env, subst, poly_sig(Prim::AToA), &[(**e).clone()])?,
         Vek(e1, e2) => infer_app(
             &e.ann,
