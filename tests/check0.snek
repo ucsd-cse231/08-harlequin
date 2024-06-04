@@ -1,9 +1,4 @@
-(defn (id_int x) (is (-> (int) int))
-   false)
+(defn (eqInt x y) (is (-> (int int) bool))
+   (= x y))
 
-(vec (id_int 7)  (id_int true))
-
-;; (defn (eqInt x y) (is (-> (int int) bool))
-;;   (= x y))
-
-;; (eqInt 17 19)
+(eqInt 17 19)
