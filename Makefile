@@ -14,7 +14,8 @@ tests/%.s: tests/%.snek src/main.rs
 tests/%.run: tests/%.s runtime/start.rs
 	nasm -f $(ARCH) tests/$*.s -o tests/$*.o
 	ar rcs tests/lib$*.a tests/$*.o
-	rustc $(TARG) -L tests/ -lour_code:$* runtime/start.rs -o tests/$*.run
+	rustc -g -L tests/ -lour_code:$* runtime/start.rs -o tests/$*.run
+	# for MACOS use # rustc $(TARG) -L tests/ -lour_code:$* runtime/start.rs -o tests/$*.run
 
 .PHONY: test
 test:
